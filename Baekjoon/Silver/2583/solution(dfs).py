@@ -15,8 +15,7 @@ for _ in range(K):
 
 ### 깊이 우선 탐색
 def dfs(r, c):
-    global cnt
-    cnt+=1
+    cnt=1
     visited[r][c] = 1
 
     for dr, dc in dir_guide:
@@ -28,16 +27,16 @@ def dfs(r, c):
         if visited[nr][nc]: continue # 이미 방문
         if arr[nr][nc]: continue # 색칠 되어 있음
 
-        dfs(nr, nc)
+        cnt+=dfs(nr, nc)
+    
+    return cnt
 
 ### 탐색 수행
 cnt_lst=[]
 for r in range(M):
     for c in range(N):
         if arr[r][c] == 0 and visited[r][c] == 0: # 찾아야 하는 부분: 색칠 안 되어 있으면서, 아직 방문 안 함
-            cnt=0
-            dfs(r, c)
-            cnt_lst.append(cnt)
+            cnt_lst.append(dfs(r, c))
 
 print(len(cnt_lst))
 print(*sorted(cnt_lst))

@@ -4,3 +4,4 @@ exec
 *.o
 .DS_Store
 .vscode/
+Certi/*

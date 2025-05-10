@@ -13,10 +13,10 @@ def gravity(arr):
         for r in range(m-1, -1, -1): # 맨 밑에서부터 올라옴
             if arr[r][c] == 1: # 현재 위치가 1이라면
                 temp_r = r
-                while temp_r + 1 < m and arr[temp_r+1][c] == 0:
+                while temp_r + 1 < m and arr[temp_r+1][c] == 0: # 하나씩 위로 올라가며 확인
                     arr[temp_r][c]=0 # 먼저 현재 위치를 0으로 만듦
                     temp_r+=1
-                    arr[temp_r][c]=1 # 다음 행을 1로 갱신신
+                    arr[temp_r][c]=1 # 다음 행을 1로 갱신
 
     return arr
 

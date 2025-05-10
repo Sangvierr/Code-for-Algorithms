@@ -14,9 +14,9 @@ def gravity(arr):
             if arr[r][c] == 1: # 현재 위치가 1이라면
                 temp_r = r
                 while temp_r + 1 < m and arr[temp_r+1][c] == 0:
-                    arr[temp_r][c]=0
+                    arr[temp_r][c]=0 # 먼저 현재 위치를 0으로 만듦
                     temp_r+=1
-                    arr[temp_r][c]=1
+                    arr[temp_r][c]=1 # 다음 행을 1로 갱신신
 
     return arr
 

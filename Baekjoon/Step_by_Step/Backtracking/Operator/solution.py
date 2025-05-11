@@ -25,5 +25,5 @@ def backtracking(idx, result, plus, minus, multiply, divide):
         else:
             backtracking(idx + 1, result // arr[idx], plus, minus, multiply, divide - 1)
 
-backtracking(1, arr[0], plus, minus, multiply, divide) # 0이 아니라 1부터 해야 앞에 수랑 연산 가능
+backtracking(1, arr[0], plus, minus, multiply, divide) # 첫번째 숫자 arr[0] 이후의 숫자와 계산하려면 idx는 1
 print(MAX, MIN)

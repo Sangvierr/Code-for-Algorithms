@@ -6,9 +6,9 @@ m, n = map(int, input().strip().split()) # 행과 열의 길이
 arr = [[0]*n for _ in range(m)]
 dir_guide = [(0, 1), (1, 0), (0, -1), (-1, 0)] # 우하좌상
 dir_idx = 0 # 먼저 오른쪽으로 가다가 못 가면 다음 인덱스로 넘기는 용
-r, c = 0, 0
+r, c = 0, 0 # 시작 위치
 
-arr[r][c] = 1
+arr[r][c] = 1 # 시작 위치부터 1, 2, 3... 채움
 
 for i in range(2, m*n+1):
     dr, dc = dir_guide[dir_idx]

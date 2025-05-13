@@ -9,6 +9,7 @@ def gravity(arr):
     m=len(arr) # 행
     n=len(arr[0]) # 열
 
+    # 열 한개씩 처리
     for c in range(n):
         for r in range(m-1, -1, -1): # 맨 밑에서부터 올라옴
             if arr[r][c] == 1: # 현재 위치가 1이라면
